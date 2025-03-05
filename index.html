@@ -1,81 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css"/>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <script src="./myScript.js" defer></script>
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
+    <button
+      class="tablink"
+      onclick="openPage('Metric',this,'green')"
+      id="defaultOpen"
+    >
+      News
+    </button>
+    <button class="tablink" onclick="openPage('Imperial',this,'orange')">
+      About
+    </button>
 
-    <button class="tablink" onclick="openPage('Metric',this,'green')" id="defaultOpen">News</button>
-    <button class="tablink" onclick="openPage('Imperial',this,'orange')">About</button>
-
-    <!-- Metric tag -->
-    <div class="tabcontent" id="Metric">
+    <form
+      id="orderForm"
+      name="orderForm"
+      method="get"
+      action="ordersubmit.html"
+    >
+      <!-- Metric tag -->
+      <div class="tabcontent" id="Metric">
         <table>
-            <tr>
-                <td>GENDER</td>
-                <td>
-                    <select name="gender" id="gender">
-                        <option value="female">Female</option>      
-                        <option value="male">Male</option>                                           
-                    </select>
-                </td>
-            </tr>
-            <tr>
-                <td>AGE</td>
-                <td><input type="text" id="age" name="age"></td>
-            </tr>
-            <tr>
-                <td>YOUR HEIGHT</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>FEET: <input type="text" id="age" name="age"></td>
-                <td>     INCHES: <input type="text" id="age" name="age"></td>
-            </tr>
-            <tr>
-                <td>YOUR WEIGHT</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>STONES: <input type="text" id="age" name="age"></td>
-                <td>     POUNDS: <input type="text" id="age" name="age"></td>
-            </tr>
+          <tr>
+            <td>GENDER</td>
+            <td>
+              <select name="gender" id="gender">
+                <option value="female">Female</option>
+                <option value="male">Male</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>AGE</td>
+            <td><input type="text" id="age" name="age" /></td>
+          </tr>
+          <tr>
+            <td>YOUR HEIGHT</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>FEET: <input type="text" id="age" name="age" /></td>
+            <td>INCHES: <input type="text" id="age" name="age" /></td>
+          </tr>
+          <tr>
+            <td>YOUR WEIGHT</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>STONES: <input type="text" id="age" name="age" /></td>
+            <td>POUNDS: <input type="text" id="age" name="age" /></td>
+          </tr>
         </table>
 
         <p>Select your activity level:</p>
 
-        <input type="radio" id="sedentary" name="activity_level" value="0">
-        <label for="sedentary">I am sedentary (little or no exercise)</label> 
-        <br>
+        <input type="radio" id="sedentary" name="activity_level" value="0" />
+        <label for="sedentary">I am sedentary (little or no exercise)</label>
+        <br />
 
-        <input type="radio" id="light" name="activity_level" value="0">
-        <label for="light">I am lightly active (little exercise or sports 1-3 days per week)</label>
-        <br>
+        <input type="radio" id="light" name="activity_level" value="0" />
+        <label for="light"
+          >I am lightly active (little exercise or sports 1-3 days per
+          week)</label
+        >
+        <br />
 
-        <input type="radio" id="moderate" name="activity_level" value="0">
-        <label for="moderate">I am moderately active (moderate exercise or sports 3-5 days per week)</label>
-        <br>
+        <input type="radio" id="moderate" name="activity_level" value="0" />
+        <label for="moderate"
+          >I am moderately active (moderate exercise or sports 3-5 days per
+          week)</label
+        >
+        <br />
 
-        <input type="radio" id="active" name="activity_level" value="0">
-        <label for="active">I am very active (hard exercise or sports 6-7 days per week)</label>
-        <br>
+        <input type="radio" id="active" name="activity_level" value="0" />
+        <label for="active"
+          >I am very active (hard exercise or sports 6-7 days per week)</label
+        >
+        <br />
 
-        <input type="radio" id="super_active" name="activity_level" value="0">
-        <label for="super_active">I am super active (very hard exercise or sports and a physical job or 2x training)</label>
-    
-        <br><br>
+        <input type="radio" id="super_active" name="activity_level" value="0" />
+        <label for="super_active"
+          >I am super active (very hard exercise or sports and a physical job or
+          2x training)</label
+        >
+
+        <br /><br />
         <button>Calculate BMR</button>
-    </div>
+      </div>
+    </form>
 
-    <!-- Imperial tag -->
-    <div class="tabcontent" id="Imperial" value="sedentary">
+    <form
+      id="orderForm"
+      name="orderForm"
+      method="get"
+      action="ordersubmit.html"
+    >
+      <!-- Imperial tag -->
+      <div class="tabcontent" id="Imperial" value="sedentary">
         <h3>News</h3>
         <p>Some news this fine day!</p>
-    </div>
-   
-</body>
+      </div>
+    </form>
+  </body>
 </html>
