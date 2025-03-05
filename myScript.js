@@ -15,4 +15,5 @@ function openPage(pageName, elmnt, color){
     elmnt.style.backgroundColor = color;
 }
 
+console.log("here is ..." + document.getElementById("defaultOpen"));
 document.getElementById("defaultOpen").click();
