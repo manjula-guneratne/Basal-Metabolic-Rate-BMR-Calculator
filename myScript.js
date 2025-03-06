@@ -8,6 +8,21 @@ window.addEventListener("load",function(){
     // Select the model list when the form opens
     gender.focus();
 
+    // Validate user inputs
+    
+    /***Gender validation is ignored for now****/
+    let age = document.getElementById("age").value;
+    let feet = document.getElementById("feet").value;
+    let inches = document.getElementById("inches").value;
+    let stones = document.getElementById("stones").value;
+    let pounds = document.getElementById("pounds").value;
+
+    function validateNumericalInput(){
+        let age = document.getElementById("age").value;
+    }
+
+    validateNumericalInput;  // function called... here?
+
     // Add an event listener for every form element
     for (let i=0; i<metricForm.elements.length; i++){
         metricForm.elements[i].addEventListener("change", CalBMR)
@@ -18,9 +33,13 @@ window.addEventListener("load",function(){
     function CalBMR(){
         // Determine the selected gender
         let gIndex = gender.selectedIndex;
-        let gValue = gender.options[gIndex].value;
+        let gValue = gender.options[gIndex].value;        
 
-        // 
+        // Validation called
+        validateNumericalInput;  // function called... here?
+
+        // Collecting data from the inputs
+
     }
 
     /*********************************************** */
