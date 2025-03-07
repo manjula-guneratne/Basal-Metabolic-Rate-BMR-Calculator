@@ -1,6 +1,7 @@
 "use strict";
 
 // Using https://en.wikipedia.org/wiki/Harris%E2%80%93Benedict_equation
+// Also using https://www.bmi-calculator.net/bmr-calculator/harris-benedict-equation/
 
 let ageInput = document.getElementById("age");
 let feetInput = document.getElementById("feet");
@@ -96,7 +97,12 @@ window.addEventListener("load", function () {
       BMR_result = one+two+three+four;
     }
 
-    alert("Result: " + BMR_result);
+    console.log("BMR result : "+BMR_result);
+
+    // Retrieve the activity selected
+    let actValue = document.querySelector('input[name="activity_level"]:checked').value;
+
+    alert("Your BMR value is " + BMR_result*actValue);
     
   })
 
