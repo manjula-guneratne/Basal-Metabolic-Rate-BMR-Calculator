@@ -37,23 +37,23 @@
           </tr>
           <tr>
             <td>AGE</td>
-            <td><input type="text" id="age" name="age" size="5"/></td>
+            <td><input type="text" id="age" name="age" size="5" value="35"/></td>
           </tr>
           <tr>
             <td>YOUR HEIGHT</td>
             <td></td>
           </tr>
           <tr>
-            <td>FEET: <input type="text" id="feet" name="feet" size="5"/></td>
-            <td>INCHES: <input type="text" id="inches" name="inches" size="5"/></td>
+            <td>FEET: <input type="text" id="feet" name="feet" size="5" value="35"/></td>
+            <td>INCHES: <input type="text" id="inches" name="inches" size="5" value="35"/></td>
           </tr>
           <tr>
             <td>YOUR WEIGHT</td>
             <td></td>
           </tr>
           <tr>
-            <td>STONES: <input type="text" id="stones" name="stones" size="5"/></td>
-            <td>POUNDS: <input type="text" id="pounds" name="pounds" size="5"/></td>
+            <td>STONES: <input type="text" id="stones" name="stones" size="5" value="35"/></td>
+            <td>POUNDS: <input type="text" id="pounds" name="pounds" size="5" value="35"/></td>
           </tr>
         </table>
 
@@ -70,7 +70,7 @@
         >
         <br />
 
-        <input type="radio" id="moderate" name="activity_level" value="1.55" />
+        <input type="radio" id="moderate" name="activity_level" value="1.55" checked/>
         <label for="moderate"
           >I am moderately active (moderate exercise or sports 3-5 days per
           week)</label
@@ -90,7 +90,7 @@
         >
 
         <br /><br />
-        <input type="submit" value="Calculate BMR" onclick="CalBMR()">
+        <input type="submit" id="submit" value="Calculate BMR" onclick="CalBMR()">
       </div>
     </form>
 

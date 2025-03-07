@@ -67,7 +67,9 @@ window.addEventListener("load", function () {
 
   // Calculator
 
-  function CalBMR() {
+  document.getElementById("submit").addEventListener("click", function(event){
+    event.preventDefault();
+
     // Determine the selected gender
     let gIndex = gender.selectedIndex;
     let gValue = gender.options[gIndex].value;
@@ -77,19 +79,22 @@ window.addEventListener("load", function () {
     let BMR_result;
 
     if (gValue == "male"){
-      BMR_result = (6.23762 * parseFloat(poundsInput)) 
-        + (12.7084 * parseFloat(inchesInput))
-        - (6.755 * parseFloat(ageInput) + 66.473)
+      BMR_result = (6.23762 * parseFloat(poundsInput)) + (12.7084 * parseFloat(inchesInput)) - (6.755 * parseFloat(ageInput) + 66.473)
     } else if (gValue == "female"){
       BMR_result = (4.33789 * parseFloat(poundsInput)) 
         + (4.69798 * parseFloat(inchesInput))
         - (4.6756 * parseFloat(ageInput) + 655.0955)
     }
 
-    console.log("BMR result : "+BMR);
+    //Testing Male BMR
+    console.log("Pounds : "+ parseFloat(poundsInput));
+    console.log("Inches : "+ parseFloat(inchesInput));
+    console.log("Age : " + parseFloat(ageInput));
+    console.log("BMR result : " + parseFloat(BMR_result));
 
-    // alert("Result: " + BMR);
-  }
+    alert("Result: " + BMR_result);
+    
+  })
 
   /*********************************************** */
 
