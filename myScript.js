@@ -1,5 +1,7 @@
 "use strict";
 
+// Using https://en.wikipedia.org/wiki/Harris%E2%80%93Benedict_equation
+
 let ageInput = document.getElementById("age");
 let feetInput = document.getElementById("feet");
 let inchesInput = document.getElementById("inches");
@@ -79,16 +81,20 @@ window.addEventListener("load", function () {
     let BMR_result = 0.0;
 
     if (gValue == "male"){
-      BMR_result = ((6.23762*parseFloat(poundsInput.value)) + (12.7084*parseFloat(inchesInput.value)) - (6.755*parseFloat(ageInput.value) + 66.473));
+      let one = 6.23762*parseFloat(poundsInput.value);
+      let two = 12.7084*parseFloat(inchesInput.value);
+      let three = 6.755*parseFloat(ageInput.value);
+      let four = 66.473;
+      
+      BMR_result = one+two+three+four;
     } else if (gValue == "female"){
-      BMR_result = ((4.33789*parseFloat(poundsInput.value)) + (4.69798*parseFloat(inchesInput.value)) - (4.6756*parseFloat(ageInput.value) + 655.0955));
+      let one = 4.33789*parseFloat(poundsInput.value);
+      let two = 4.69798*parseFloat(inchesInput.value);
+      let three = 4.6756*parseFloat(ageInput.value);
+      let four = 655.0955;
+      
+      BMR_result = one+two+three+four;
     }
-
-    //Testing Male BMR
-    console.log("Pounds : "+ parseFloat(poundsInput.value));
-    console.log("Inches : "+ parseFloat(inchesInput.value));
-    console.log("Age : " + parseFloat(ageInput.value));
-    console.log("BMR result : " + parseFloat(BMR_result.value));
 
     alert("Result: " + BMR_result);
     
