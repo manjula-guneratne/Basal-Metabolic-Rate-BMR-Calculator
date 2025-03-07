@@ -86,7 +86,9 @@ window.addEventListener("load", function () {
         - (4.6756 * parseFloat(ageInput) + 655.0955)
     }
 
-    alert("Result: " + BMR);
+    console.log("BMR result : "+BMR);
+
+    // alert("Result: " + BMR);
   }
 
   /*********************************************** */
@@ -94,10 +96,6 @@ window.addEventListener("load", function () {
   // Imperial form
   let imperialForm = document.forms.imperialForm;
 });
-
-function metricFunction() {
-  alert("this works");
-}
 
 function openPage(pageName, elmnt, color) {
   var i, tabcontent, tablinks;

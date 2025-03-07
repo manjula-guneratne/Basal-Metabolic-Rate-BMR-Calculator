@@ -22,9 +22,6 @@
     <form
       id="metricForm"
       name="metricForm"
-      method="get"
-      action="metricsubmit.html"
-      onsubmit="metricFunction()"
     >
       <!-- Metric tag -->
       <div class="tabcontent" id="Metric">
@@ -93,7 +90,7 @@
         >
 
         <br /><br />
-        <input type="submit" value="Calculate BMR">
+        <input type="submit" value="Calculate BMR" onclick="CalBMR()">
       </div>
     </form>
 
