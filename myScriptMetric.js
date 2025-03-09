@@ -81,8 +81,12 @@ window.addEventListener("load", function () {
 
       let BMR_result = 0.0;
 
-      let weightValue = (parseFloat(kilogramInput.value) + (0.1*parseFloat(centimeterInput.value)));
-      let heightValue = (parseFloat(kilogramInput.value) + (0.001*parseFloat(centimeterInput.value)));
+      let weightValue =
+        parseFloat(kilogramInput.value) +
+        0.1 * parseFloat(centimeterInput.value);
+      let heightValue =
+        parseFloat(kilogramInput.value) +
+        0.001 * parseFloat(centimeterInput.value);
 
       if (gValue == "male") {
         let one = 13.7516 * weightValue;

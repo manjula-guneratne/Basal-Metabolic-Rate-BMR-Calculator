@@ -63,7 +63,7 @@ window.addEventListener("load", function () {
 
   // Add an event listener for every form element
   for (let i = 0; i < metricForm.elements.length; i++) {
-    metricForm.elements[i].addEventListener("change", validityFn);
+    imperialForm.elements[i].addEventListener("change", validityFn);
   }
 
   // Calculator
