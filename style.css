@@ -5,6 +5,22 @@ body, html{
 }
 
 .tablink{
+    white-space: nowrap;
+    width: 500px;
+}
+
+table{
+    margin-left: 10%;
+}
+
+th, td{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.tablink{
     background-color: #555;
     color: white;
     float: left;
@@ -26,6 +42,19 @@ body, html{
     padding: 100px 20px;
     height: 100%;
     font-size: 17px;
+}
+
+#submit{
+    margin-left: 20%;
+    height: 50px;
+    width: 150px;
+    color: white;
+    background-color: gray;
+}
+
+#submit:hover{
+    color: black;
+    background-color: green;
 }
 
 #Metric {background-color: green;}
