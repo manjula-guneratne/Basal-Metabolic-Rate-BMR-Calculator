@@ -19,8 +19,6 @@ window.addEventListener("load", function () {
 
   // Validate user inputs
 
-  /***Gender validation is ignored for now****/
-
   function validityFn() {
     if (ageInput.validity.valueMissing) {
       ageInput.setCustomValidity("Enter age");
@@ -96,8 +94,6 @@ window.addEventListener("load", function () {
       
       BMR_result = one+two+three+four;
     }
-
-    console.log("BMR result : "+BMR_result);
 
     // Retrieve the activity selected
     let actValue = document.querySelector('input[name="activity_level"]:checked').value;
