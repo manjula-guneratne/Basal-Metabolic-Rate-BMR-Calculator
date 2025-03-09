@@ -3,7 +3,7 @@
 // Using https://en.wikipedia.org/wiki/Harris%E2%80%93Benedict_equation
 // Also using https://www.bmi-calculator.net/bmr-calculator/harris-benedict-equation/
 
-let ageInput = document.getElementById("age");
+let ageInput = document.getElementById("ageMetric");
 let feetInput = document.getElementById("feet");
 let inchesInput = document.getElementById("inches");
 let stonesInput = document.getElementById("stones");
