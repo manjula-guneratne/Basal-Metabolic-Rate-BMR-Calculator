@@ -68,7 +68,7 @@ window.addEventListener("load", function () {
 
   // Calculator
 
-  document.getElementById("submit").addEventListener("click", function(event){
+  document.getElementById("submitMetric").addEventListener("click", function(event){
     event.preventDefault();
 
     // Determine the selected gender

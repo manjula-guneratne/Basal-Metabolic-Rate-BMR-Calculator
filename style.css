@@ -44,7 +44,7 @@ th, td{
     font-size: 17px;
 }
 
-#submit{
+#submitMetric, #submitImerial {
     margin-left: 20%;
     height: 50px;
     width: 150px;
@@ -52,13 +52,18 @@ th, td{
     background-color: gray;
 }
 
-#submit:hover{
+#submitMetric:hover{
     color: black;
     background-color: green;
 }
 
+#submitImerial:hover{
+    color: black;
+    background-color: #cc5801;
+}
+
 #Metric {background-color: green;}
-#Imperial {background-color: #ef6c00;}
+#Imperial {background-color: #cc5801;}
 
 input{
     text-align: center;
