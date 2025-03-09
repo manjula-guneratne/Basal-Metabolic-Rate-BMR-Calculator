@@ -11,7 +11,7 @@ let gramInput = document.getElementById("gram");
 
 window.addEventListener("load", function () {
   // Metric form
-  let imperialForm = this.document.forms.imperialForm;
+  let imperialForm = document.forms.imperialForm;
   let gender = metricForm.elements.gender;
 
   // Select the model list when the form opens
@@ -21,7 +21,7 @@ window.addEventListener("load", function () {
 
   function validityFn() {
     if (ageMetric.validity.valueMissing) {
-      ageMetric.setCustomValidity("Enter age");
+      ageMetric.setCustomValidity("placeholder","Enter age");
     } else if (!/^\d+$/.test(parseFloat(ageMetric.value))) {
       ageMetric.setCustomValidity("Enter only digits");
     } else {
@@ -29,7 +29,7 @@ window.addEventListener("load", function () {
     }
 
     if (centimeterInput.validity.valueMissing) {
-      centimeterInput.setAttribute("Enter centimeter value");
+      centimeterInput.setAttribute("placeholder","Enter centimeter value");
     } else if (!/^\d+$/.test(parseFloat(feetInput.value))) {
       centimeterInput.setCustomValidity("Enter only digits");
     } else {
@@ -37,7 +37,7 @@ window.addEventListener("load", function () {
     }
 
     if (milimeterInput.validity.valueMissing) {
-      milimeterInput.setAttribute("Enter milimeter value");
+      milimeterInput.setAttribute("placeholder","Enter milimeter value");
     } else if (!/^\d+$/.test(parseFloat(milimeterInput.value))) {
       milimeterInput.setCustomValidity("Enter only digits");
     } else {
@@ -45,7 +45,7 @@ window.addEventListener("load", function () {
     }
 
     if (kilogramInput.validity.valueMissing) {
-      kilogramInput.setCustomValidity("Enter kilogram value");
+      kilogramInput.setCustomValidity("placeholder","Enter kilogram value");
     } else if (!/^\d+$/.test(parseFloat(kilogramInput.value))) {
       kilogramInput.setCustomValidity("Enter only digits");
     } else {
@@ -53,17 +53,12 @@ window.addEventListener("load", function () {
     }
 
     if (gramInput.validity.valueMissing) {
-      gramInput.setCustomValidity("Enter gram value");
+      gramInput.setCustomValidity("placeholder","Enter gram value");
     } else if (!/^\d+$/.test(parseFloat(gramInput.value))) {
       gramInput.setCustomValidity("Enter only digits");
     } else {
       gramInput.setCustomValidity("");
     }
-  }
-
-  // Add an event listener for every form element
-  for (let i = 0; i < metricForm.elements.length; i++) {
-    metricForm.elements[i].addEventListener("change", validityFn);
   }
 
   // Calculator
@@ -76,6 +71,11 @@ window.addEventListener("load", function () {
       // Determine the selected gender
       let gIndex = gender.selectedIndex;
       let gValue = gender.options[gIndex].value;
+
+      // Add an event listener for every form element
+      for (let i = 0; i < metricForm.elements.length; i++) {
+        metricForm.elements[i].addEventListener("change", validityFn());
+      }
 
       // Collecting data from the inputs
 
@@ -109,7 +109,7 @@ window.addEventListener("load", function () {
         'input[name="activity_level"]:checked'
       ).value;
 
-      alert("Your BMR value is " + BMR_result * actValue);
+      alert("Your BMR value is " + (BMR_result*actValue).toFixed(3));
     });
 });
 

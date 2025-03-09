@@ -11,7 +11,7 @@ let poundsInput = document.getElementById("pounds");
 
 window.addEventListener("load", function () {
   // Imperial form
-  let imperialForm = this.document.forms.imperialForm;
+  let imperialForm = document.forms.imperialForm;
   let gender = metricForm.elements.gender;
 
   // Select the model list when the form opens
@@ -61,11 +61,6 @@ window.addEventListener("load", function () {
     }
   }
 
-  // Add an event listener for every form element
-  for (let i = 0; i < metricForm.elements.length; i++) {
-    imperialForm.elements[i].addEventListener("change", validityFn);
-  }
-
   // Calculator
 
   document.getElementById("submitImperial").addEventListener("click", function(event){
@@ -74,6 +69,11 @@ window.addEventListener("load", function () {
     // Determine the selected gender
     let gIndex = gender.selectedIndex;
     let gValue = gender.options[gIndex].value;
+    
+    // Add an event listener for every form element
+    for (let i = 0; i < imperialForm.elements.length; i++) {
+      imperialForm.elements[i].addEventListener("change", validityFn());
+    }
 
     // Collecting data from the inputs
 
@@ -102,7 +102,7 @@ window.addEventListener("load", function () {
     // Retrieve the activity selected
     let actValue = document.querySelector('input[name="activity_level"]:checked').value;
 
-    alert("Your BMR value is " + BMR_result*actValue);
+    alert("Your BMR value is " + (BMR_result*actValue).toFixed(3));
     
   })
 });
